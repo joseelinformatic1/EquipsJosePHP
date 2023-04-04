@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block title %}Inici {% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('Impact/assets/css/estilsInici.css') }}" rel="stylesheet">
+{% endblock %}
+{% block body %}
+    <h1 id="titolInici"></h1>
+    <p id="paragrafInici">
+{{ message }}
+    </p>
+    <img src=""id="imatgeInici">
+{% endblock %}
+{% block javascript %}
+{{ parent() }}
+{% endblock %}

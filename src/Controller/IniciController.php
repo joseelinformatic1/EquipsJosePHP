@@ -6,18 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class IniciController
-{
-    #[Route('/inici', name: 'inici1')]
+class IniciController extends AbstractController{
+    #[Route('/', name: 'inici')]
     public function index()
     {
-       return new Response("Benvinguda a la web de Equips");
+       return $this-> render('inici.html.twig',['message' => "Benvinguda a la web de Equips"]);
     }
-    #[Route('/', name: 'inici2')]
-    public function index2()
-    {
-        return new Response("Benvinguda a la web de Equips");
-    }
+
 
 
 }
